@@ -33,7 +33,7 @@
       "component": "second",
       "async": true,
       "props": {
-        "appName": "VTEX IO"
+        "showMenu": false
       }
     },
     "legacy-getting-started/example": {
