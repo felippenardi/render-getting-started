@@ -1,0 +1,6 @@
+mutation extensionPointSettings($extensionId: String, $app: String, $settings: String) {
+  extensionSettings(extensionId: $extensionId, app: $app, settings: $settings) {
+    app
+    settings
+  }
+}
