@@ -11,6 +11,9 @@
     "getting-started/nested-b": {
       "path": "/getting-started/b"
     },
+    "getting-started/container": {
+      "path": "/getting-started/container"
+    },
     "legacy-getting-started": {
       "path": "/legacy-extensions/render-example",
       "theme": "theme"
@@ -25,6 +28,15 @@
     },
     "getting-started/nested-b": {
       "component": "nestedB"
+    },
+    "getting-started/container": {
+      "component": "vtex.render-runtime/ExtensionContainer"
+    },
+    "getting-started/container/first": {
+      "component": "first"
+    },
+    "getting-started/container/second": {
+      "component": "second"
     },
     "getting-started/first-step": {
       "component": "first"
