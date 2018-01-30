@@ -2,9 +2,9 @@ import React from 'react'
 import {FormattedMessage} from 'react-intl'
 
 const SecondStep = ({showMenu}) => (
-  <h2 className='dn'>
+  <h2 className='green'>
     <FormattedMessage id="getting-started.congrats"/>
-    {showMenu}
+    {showMenu && 'menu'}
   </h2>
 )
 
