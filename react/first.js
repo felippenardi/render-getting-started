@@ -10,7 +10,7 @@ const FirstStep = () =>
       <FormattedHTMLMessage id="getting-started.toolbelt"/>
     </p>
     <code className="code">
-      <pre className="pre bg-near-white pa3">
+      <pre className="pre bg-near-black pa6 mv6">
 {`  $ npm install -g vtex
 `}
       </pre>
@@ -19,7 +19,7 @@ const FirstStep = () =>
       <FormattedHTMLMessage id="getting-started.workspace-creation"/>
     </p>
     <code className="code">
-      <pre className="pre bg-near-white pa3">
+      <pre className="pre bg-near-black pa6 mv6">
 {`  $ vtex login
 ? Email: seuemail@vtex.com
 ? Account: ${global.__RUNTIME__.account}
@@ -37,7 +37,7 @@ const FirstStep = () =>
       <FormattedMessage id="getting-started.clone"/>
     </p>
     <code className="code">
-      <pre className="pre bg-near-white pa3">
+      <pre className="pre bg-near-black pa6 mv6">
 {`  $ git clone git@github.com:vtex-apps/render-getting-started.git
   $ cd render-getting-started
   $ vtex local eslint
@@ -51,7 +51,7 @@ const FirstStep = () =>
       <FormattedHTMLMessage id="getting-started.watch"/>
     </p>
     <code className="code">
-      <pre className="pre bg-near-white pa3">
+      <pre className="pre bg-near-black pa6 mv6">
 {`  $ vtex install vtex.builder-hub
 info:    Installed app vtex.builder-hub@0.x successfully
   $ vtex link
@@ -72,12 +72,12 @@ Your URL: http://meu-workspace-unico.basedevmkp.myvtex.com/getting-started
       <FormattedMessage id="getting-started.change-css"/>
     </p>
     <code className="code">
-      <pre className="pre bg-near-white pa3">
+      <pre className="pre bg-near-black pa6 mv6">
 {`  // ANTES
 <h2 className={\`dn \${largeText && 'f1'}\`}>
 
 // DEPOIS
-<h2 className={\`green \${largeText && 'f1'}\`}>
+<h2 className={\`rebel-pink \${largeText && 'f1'}\`}>
 `}
       </pre>
     </code>

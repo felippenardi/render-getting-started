@@ -5,9 +5,9 @@ import {FormattedMessage, FormattedHTMLMessage} from 'react-intl'
 class GettingStartedIndex extends Component {
   render () {
     return (
-      <article>
-        <header className="bg-light-blue sans-serif">
-          <div className="mw9 center pa5 pt4-ns pb4-ns ph7-1 grow">
+      <article className="bg-serious-black">
+        <header className="bg-heavy-rebel-pink sans-serif white">
+          <div className="mw8 center pa6 pv6-ns ph7-1">
             <h1 className="f2 f1-m f-headline-l lh-title mv0">
               <FormattedMessage id="getting-started.greeting"/>
             </h1>
@@ -19,7 +19,7 @@ class GettingStartedIndex extends Component {
             </h4>
           </div>
         </header>
-        <div className="pa4 ph7-l georgia mw9 center">
+        <div className="pa4 ph7-l georgia mw8 center near-white f4">
           {__RUNTIME__.hints.mobile && <FormattedMessage id="getting-started.mobile"/>}
           <ExtensionPoint id="first-step">
           </ExtensionPoint>

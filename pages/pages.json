@@ -17,6 +17,11 @@
     "legacy-getting-started": {
       "path": "/legacy-extensions/render-example",
       "theme": "theme"
+    },
+    "legacy-without-tachyons": {
+      "path": "/legacy-extensions/render-example-without-tachyons",
+      "theme": "theme",
+      "disableExternals": ["tachyons"]
     }
   },
   "extensions": {
@@ -48,13 +53,19 @@
         "largeText": false
       }
     },
-    "legacy-getting-started/example": {
+    "legacy-getting-started": {
       "component": "index"
     },
-    "legacy-getting-started/example/first-step": {
+    "legacy-getting-started/first-step": {
       "component": "first"
     },
-    "legacy-getting-started/example/second-step": {
+    "legacy-getting-started/second-step": {
+      "component": "second"
+    },
+    "legacy-without-tachyons/first-step": {
+      "component": "first"
+    },
+    "legacy-without-tachyons/second-step": {
       "component": "second"
     }
   }
