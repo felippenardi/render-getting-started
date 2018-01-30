@@ -33,7 +33,7 @@
       "component": "second",
       "async": true,
       "props": {
-        "showMenu": false
+        "largeText": false
       }
     },
     "legacy-getting-started/example": {

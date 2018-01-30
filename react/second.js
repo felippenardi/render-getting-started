@@ -1,10 +1,9 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
 
-const SecondStep = ({showMenu}) => (
-  <h2 className='green'>
+const SecondStep = ({largeText}) => (
+  <h2 className={`dn ${largeText && 'f1'}`}>
     <FormattedMessage id="getting-started.congrats"/>
-    {showMenu && 'menu'}
   </h2>
 )
 
