@@ -74,10 +74,10 @@ Your URL: http://meu-workspace-unico.basedevmkp.myvtex.com/getting-started
     <code className="code">
       <pre className="pre bg-near-black pa6 mv6">
 {`  // ANTES
-<h2 className={\`dn \${largeText && 'f1'}\`}>
+<h2 className="dn">
 
 // DEPOIS
-<h2 className={\`rebel-pink \${largeText && 'f1'}\`}>
+<h2 className="green">
 `}
       </pre>
     </code>

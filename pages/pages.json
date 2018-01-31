@@ -48,9 +48,14 @@
     },
     "getting-started/second-step": {
       "component": "second",
-      "async": true,
+      "async": true
+    },
+    "getting-started/configurable-component": {
+      "component": "configurable",
       "props": {
-        "largeText": false
+        "show": true,
+        "title": "This is a configurable component",
+        "text": "You can edit it yourself in the edit bar below."
       }
     },
     "legacy-getting-started": {
