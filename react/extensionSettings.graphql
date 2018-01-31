@@ -1,0 +1,5 @@
+mutation extensionPointSettings($extensionName: String, $component: String, $props: String) {
+  extensionSettings(extensionName: $extensionName, component: $component, props: $props) {
+    result
+  }
+}

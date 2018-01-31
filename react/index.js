@@ -1,8 +1,34 @@
 import React, {Component} from 'react'
 import {ExtensionPoint} from 'render'
 import {FormattedMessage, FormattedHTMLMessage} from 'react-intl'
+import {compose, graphql} from 'react-apollo'
+
+import saveExtesionPointSettings from './extensionSettings.graphql'
 
 class GettingStartedIndex extends Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    const {saveExtesionPointSettings} = this.props
+    const extensionName = 'getting-started/nested-a'
+    saveExtesionPointSettings({
+      variables: {
+        extensionName,
+        component: 'vtex.render-getting-started@0.8.0/nestedA',
+        props: JSON.stringify({"anderson": "moreira"})
+      }
+    })
+    .then((data) => {
+      console.log("OK!", data)
+    })
+    .catch(err => {
+      console.log("ERR!", err)
+    })
+  }
+
   render () {
     return (
       <article className="bg-serious-black">
@@ -29,9 +55,21 @@ class GettingStartedIndex extends Component {
           </ExtensionPoint>
         </div>
         {this.props.children}
+        <div>
+          <button onClick={this.handleClick}>
+            EDIT
+          </button>
+        </div>
       </article>
     )
   }
 }
 
-export default GettingStartedIndex
+
+GettingStartedIndex.propTypes = {
+  saveExtesionPointSettings: PropTypes.func,
+}
+
+export default compose(
+  graphql(saveExtesionPointSettings, {name: 'saveExtesionPointSettings'}),
+)(GettingStartedIndex)
