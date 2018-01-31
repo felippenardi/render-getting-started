@@ -15,3 +15,31 @@ export default function configurable({show, titleScale = 2, textScale = 4, title
     </div>
   )
 }
+
+configurable.schema = {
+  title: 'Configurable',
+  description: 'A simple configurable component',
+  type: 'object',
+  properties: {
+    show: {
+      type: 'boolean',
+      title: 'Show component'
+    },
+    title: {
+      type: 'string',
+      title: 'Title',
+    },
+    titleScale: {
+      type: 'integer',
+      title: 'Title scale',
+    },
+    text: {
+      type: 'string',
+      title: 'Text',
+    },
+    textScale: {
+      type: 'integer',
+      title: 'Text scale',
+    }
+  }
+}
