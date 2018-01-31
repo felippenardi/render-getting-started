@@ -1,6 +1,5 @@
-mutation extensionPointSettings($extensionId: String, $app: String, $settings: String) {
-  extensionSettings(extensionId: $extensionId, app: $app, settings: $settings) {
-    app
-    settings
+mutation extensionPointSettings($extensionName: String, $component: String, $props: String) {
+  extensionSettings(extensionName: $extensionName, component: $component, props: $props) {
+    result
   }
 }

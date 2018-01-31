@@ -13,12 +13,12 @@ class GettingStartedIndex extends Component {
 
   handleClick() {
     const {saveExtesionPointSettings} = this.props
-    const extensionId = 'getting-started/nested-a'
+    const extensionName = 'getting-started/nested-a'
     saveExtesionPointSettings({
       variables: {
-        extensionId,
-        app: 'vtex.render-getting-started@0.6.3/nestedA',
-        settings: JSON.stringify({"a": "b"})
+        extensionName,
+        component: 'vtex.render-getting-started@0.6.3/nestedA',
+        props: JSON.stringify({"anderson": "moreira"})
       }
     })
     .then((data) => {
