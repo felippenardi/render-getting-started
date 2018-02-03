@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
-import {ExtensionPoint} from 'render'
+import {ExtensionPoint, Link} from 'render'
 import {FormattedMessage, FormattedHTMLMessage} from 'react-intl'
 
 class GettingStartedIndex extends Component {
   render () {
+    const {to} = this.props
+
     return (
       <article className="bg-serious-black">
         <header className="bg-heavy-rebel-pink sans-serif white">
@@ -19,15 +21,20 @@ class GettingStartedIndex extends Component {
             </h4>
           </div>
         </header>
-        <div className="pa4 ph7-l georgia mw8 center near-white f4">
-          {__RUNTIME__.hints.mobile && <FormattedMessage id="getting-started.mobile"/>}
-          <ExtensionPoint id="first-step">
-          </ExtensionPoint>
-          <ExtensionPoint id="second-step">
-          </ExtensionPoint>
-          <ExtensionPoint id="configurable-component">
-          </ExtensionPoint>
-        </div>
+        {__RUNTIME__.hints.mobile && <FormattedMessage id="getting-started.mobile"/>}
+        {!this.props.children && (
+          <div className="pa4 ph7-l georgia mw8 center near-white f4">
+            <ExtensionPoint id="first-step">
+            </ExtensionPoint>
+            <ExtensionPoint id="second-step">
+            </ExtensionPoint>
+            <ExtensionPoint id="configurable-component">
+            </ExtensionPoint>
+            <Link to={to} className="f4 fw6 db rebel-pink no-underline underline-hover">
+              Link to {to}
+            </Link>
+          </div>
+        )}
         {this.props.children}
       </article>
     )

@@ -6,10 +6,16 @@
       "extensible": true
     },
     "getting-started/nested-a": {
-      "path": "/getting-started/a"
+      "path": "/getting-started/nested-a"
     },
     "getting-started/nested-b": {
-      "path": "/getting-started/b"
+      "path": "/getting-started/nested-b"
+    },
+    "getting-started/nested-param": {
+      "path": "/getting-started/:slug/nested-param"
+    },
+    "getting-started/nested-param/deeply-nested": {
+      "path": "/getting-started/:slug/nested-param/:deep/deeply-nested"
     },
     "getting-started/container": {
       "path": "/getting-started/container"
@@ -26,22 +32,49 @@
   },
   "extensions": {
     "getting-started": {
-      "component": "index"
+      "component": "index",
+      "props": {
+        "to": "/getting-started/nested-a"
+      }
     },
     "getting-started/nested-a": {
-      "component": "nestedA"
+      "component": "nested",
+      "props": {
+        "to": "/getting-started/nested-b"
+      }
     },
     "getting-started/nested-b": {
-      "component": "nestedB"
+      "component": "nested",
+      "props": {
+        "to": "/getting-started/myparam/nested-param"
+      }
+    },
+    "getting-started/nested-param": {
+      "component": "nested",
+      "props": {
+        "to": "/getting-started/myparam/nested-param/second/deeply-nested"
+      }
+    },
+    "getting-started/nested-param/deeply-nested": {
+      "component": "nested",
+      "props": {
+        "to": "/getting-started/container"
+      }
     },
     "getting-started/container": {
       "component": "vtex.render-runtime/ExtensionContainer"
     },
     "getting-started/container/first": {
-      "component": "first"
+      "component": "nested",
+      "props": {
+        "to": "/getting-started"
+      }
     },
     "getting-started/container/second": {
-      "component": "second"
+      "component": "nested",
+      "props": {
+        "to": "/getting-started/nested-a"
+      }
     },
     "getting-started/first-step": {
       "component": "first"
