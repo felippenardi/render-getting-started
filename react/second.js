@@ -2,7 +2,7 @@ import React from 'react'
 import {FormattedMessage} from 'react-intl'
 
 const SecondStep = () => (
-  <h2 className="dn">
+  <h2>
     <FormattedMessage id="getting-started.congrats"/>
   </h2>
 )
