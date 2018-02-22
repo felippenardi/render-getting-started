@@ -28,6 +28,9 @@
       "path": "/legacy-extensions/render-example-without-tachyons",
       "theme": "theme",
       "disableExternals": ["tachyons"]
+    },
+    "dynamic": {
+      "path": "/dynamic"
     }
   },
   "extensions": {
@@ -105,6 +108,37 @@
     },
     "legacy-without-tachyons/second-step": {
       "component": "second"
+    },
+    "dynamic": {
+      "component": "dynamic"
+    },
+    "dynamic/banner": {
+      "component": "section",
+      "props": {
+        "title": "Banner",
+        "text": "A banner would fit nicely here!"
+      }
+    },
+    "dynamic/description": {
+      "component": "section",
+      "props": {
+        "title": "Description",
+        "text": "This refrigerator is so nice! All your foodstuffs fit into it!"
+      }
+    },
+    "dynamic/benefits": {
+      "component": "section",
+      "props": {
+        "title": "Benefits",
+        "text": "Buying this refrigerator will definitely make your life better. By an observable amount."
+      }
+    },
+    "dynamic/price": {
+      "component": "section",
+      "props": {
+        "title": "Price",
+        "text": "All this refrigerator goodness could be yours for the low low price of $1000"
+      }
     }
   }
 }
