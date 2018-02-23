@@ -30,6 +30,8 @@ class GettingStartedIndex extends Component {
             </ExtensionPoint>
             <ExtensionPoint id="configurable-component">
             </ExtensionPoint>
+            <ExtensionPoint id="empty">
+            </ExtensionPoint>
             <Link to={to} className="f4 fw6 db rebel-pink no-underline underline-hover">
               Link to {to}
             </Link>

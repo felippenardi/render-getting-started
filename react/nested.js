@@ -16,4 +16,16 @@ const Nested = ({params, to = '', children}) =>
     {children}
   </div>
 
+Nested.schema = {
+  title: 'Nested',
+  description: 'A nested component with a link',
+  type: 'object',
+  properties: {
+    to: {
+      type: 'string',
+      title: 'Link to',
+    },
+  },
+}
+
 export default Nested
