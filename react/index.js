@@ -21,7 +21,7 @@ class GettingStartedIndex extends Component {
             </h4>
           </div>
         </header>
-        {__RUNTIME__.hints.mobile && <FormattedMessage id="getting-started.mobile"/>}
+        {__RUNTIME__.hints && __RUNTIME__.hints.mobile && <FormattedMessage id="getting-started.mobile"/>}
         {!this.props.children && (
           <div className="pa4 ph7-l georgia mw8 center near-white f4">
             <ExtensionPoint id="first-step">
