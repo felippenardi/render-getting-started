@@ -73,10 +73,10 @@ Your URL: http://meu-workspace-unico.basedevmkp.myvtex.com/getting-started
     </p>
     <code className="code">
       <pre className="pre bg-near-black pa6 mv6">
-{`  // ANTES
+{`  // Before
 <h2 className="dn">
 
-// DEPOIS
+// After
 <h2 className="green">
 `}
       </pre>

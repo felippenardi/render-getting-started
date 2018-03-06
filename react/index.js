@@ -1,13 +1,20 @@
 import React, {Component} from 'react'
-import {ExtensionPoint, Link} from 'render'
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl'
+import PropTypes from 'prop-types'
+import {ExtensionPoint, Link, Helmet} from 'render'
+import {FormattedMessage, FormattedHTMLMessage, injectIntl, intlShape} from 'react-intl'
 
 class GettingStartedIndex extends Component {
+  static propTypes = {
+    intl: intlShape,
+    to: PropTypes.string,
+  }
+
   render () {
-    const {to} = this.props
+    const {to, intl: {formatMessage}} = this.props
 
     return (
       <article className="bg-serious-black">
+        <Helmet title={formatMessage({id: 'getting-started.title'})} />
         <header className="bg-heavy-rebel-pink sans-serif white">
           <div className="mw8 center pa6 pv6-ns ph7-1">
             <h1 className="f2 f1-m f-headline-l lh-title mv0">
@@ -43,4 +50,4 @@ class GettingStartedIndex extends Component {
   }
 }
 
-export default GettingStartedIndex
+export default injectIntl(GettingStartedIndex)
