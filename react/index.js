@@ -6,11 +6,12 @@ import {FormattedMessage, FormattedHTMLMessage, injectIntl, intlShape} from 'rea
 class GettingStartedIndex extends Component {
   static propTypes = {
     intl: intlShape,
-    to: PropTypes.string,
+    page: PropTypes.string,
+    targetParams: PropTypes.object,
   }
 
   render () {
-    const {to, intl: {formatMessage}} = this.props
+    const {page, targetParams = {}, intl: {formatMessage}} = this.props
 
     return (
       <article className="bg-serious-black">
@@ -39,8 +40,8 @@ class GettingStartedIndex extends Component {
             </ExtensionPoint>
             <ExtensionPoint id="empty">
             </ExtensionPoint>
-            <Link to={to} className="f4 fw6 db rebel-pink no-underline underline-hover">
-              Link to {to}
+            <Link page={page} params={targetParams} className="f4 fw6 db rebel-pink no-underline underline-hover">
+              Link to {page} with params: {JSON.stringify(targetParams)}
             </Link>
           </div>
         )}

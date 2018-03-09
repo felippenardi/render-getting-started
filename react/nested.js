@@ -1,17 +1,17 @@
 import React from 'react'
 import {Link} from 'render'
 
-const Nested = ({params, to = '', children}) =>
+const Nested = ({params, page, targetParams = {}, children}) =>
   <div className="pa4 ph7 pt0 georgia mw8 center near-white f4">
     <h1>> Nested Route</h1>
-    <Link to={to} className="f4 fw6 db rebel-pink no-underline underline-hover">
-      Link to {to}
+    <Link page={page} params={targetParams} className="f4 fw6 db rebel-pink no-underline underline-hover">
+      Link to {page} with params: {JSON.stringify(targetParams)}
     </Link>
     <p>
       Props:
     </p>
     <p>
-      {JSON.stringify({params, to})}
+      {JSON.stringify({params, page, targetParams})}
     </p>
     {children}
   </div>

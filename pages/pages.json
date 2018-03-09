@@ -34,31 +34,38 @@
     "getting-started": {
       "component": "index",
       "props": {
-        "to": "/getting-started/nested-a"
+        "page": "getting-started/nested-a"
       }
     },
     "getting-started/nested-a": {
       "component": "nested",
       "props": {
-        "to": "/getting-started/nested-b"
+        "page": "getting-started/nested-b"
       }
     },
     "getting-started/nested-b": {
       "component": "nested",
       "props": {
-        "to": "/getting-started/myparam/nested-param"
+        "page": "getting-started/nested-param",
+        "targetParams": {
+          "slug": "myslug"
+        }
       }
     },
     "getting-started/nested-param": {
       "component": "nested",
       "props": {
-        "to": "/getting-started/myparam/nested-param/second/deeply-nested"
+        "page": "getting-started/nested-param/deeply-nested",
+        "targetParams": {
+          "slug": "myslug",
+          "deep": "second"
+        }
       }
     },
     "getting-started/nested-param/deeply-nested": {
       "component": "nested",
       "props": {
-        "to": "/getting-started/container"
+        "page": "getting-started/container"
       }
     },
     "getting-started/container": {
@@ -67,13 +74,13 @@
     "getting-started/container/first": {
       "component": "nested",
       "props": {
-        "to": "/getting-started"
+        "page": "getting-started"
       }
     },
     "getting-started/container/second": {
       "component": "nested",
       "props": {
-        "to": "/getting-started/nested-a"
+        "page": "getting-started/nested-a"
       }
     },
     "getting-started/first-step": {
