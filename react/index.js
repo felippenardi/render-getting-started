@@ -40,7 +40,7 @@ class GettingStartedIndex extends Component {
             </ExtensionPoint>
             <ExtensionPoint id="empty">
             </ExtensionPoint>
-            <Link page={page} params={targetParams} className="f4 fw6 db rebel-pink no-underline underline-hover">
+            <Link page={page} params={targetParams} className="f4 fw6 db rebel-pink no-underline underline-hover pointer">
               Link to {page} with params: {JSON.stringify(targetParams)}
             </Link>
           </div>
