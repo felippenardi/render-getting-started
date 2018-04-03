@@ -16,6 +16,6 @@
   ],
   "settingsSchema": {},
   "scripts": {
-    "postreleasy": "vtex publish --public --staging"
+    "postreleasy": "vtex publish --public"
   }
 }
